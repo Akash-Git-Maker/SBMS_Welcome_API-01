@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: welcome-api # Use a different name from greet-api
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+server:
+  port: 9091
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
